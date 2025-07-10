@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ER Diagram Generator</title>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+  <script src="{% static 'script.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+<body>
+  <header>
+    <h1>✨ ER Diagram Generator ✨</h1>
+  </header>
+
+  <div class="container">
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Generate Diagram</button>
+    </form>
+
+    {% if diagram_code %}
+      <div class="diagram-card">
+        <h2>Your Diagram</h2>
+        <pre id="mermaidDiagram" class="mermaid">{{ diagram_code }}</pre>
+        <button class="download-btn" onclick="downloadSVG()">Download as SVG</button>
+      </div>
+    {% endif %}
+  </div>
+
+  <footer>
+    &copy; 2025 Your ERD Tool • Built with Django 🦄
+  </footer>
+</body>
+</html>

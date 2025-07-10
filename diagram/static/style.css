@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Fira+Code&display=swap');
+
+:root {
+  --primary: #4f46e5;
+  --primary-dark: #4338ca;
+  --secondary: #10b981;
+  --secondary-dark: #059669;
+  --bg: #f9fafb;
+  --text: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  font-family: 'Inter', system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+}
+
+header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+form {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+  padding: 30px;
+  margin-bottom: 40px;
+  transition: transform 0.3s ease;
+}
+
+form:hover {
+  transform: translateY(-2px);
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 15px;
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  resize: vertical;
+  transition: border 0.2s ease;
+}
+
+textarea:focus {
+  border: 1px solid var(--primary);
+  outline: none;
+}
+
+button {
+  display: inline-block;
+  margin-top: 20px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.diagram-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+  padding: 30px;
+  overflow-x: auto;
+  transition: transform 0.3s ease;
+}
+
+.diagram-card:hover {
+  transform: translateY(-2px);
+}
+
+.diagram-card h2 {
+  margin-top: 0;
+  font-size: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+pre.mermaid {
+  background: #f3f4f6;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.download-btn {
+  margin-top: 20px;
+  background: var(--secondary);
+}
+
+.download-btn:hover {
+  background: var(--secondary-dark);
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  color: #9ca3af;
+}
