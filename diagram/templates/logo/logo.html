@@ -91,14 +91,12 @@
     </div>
   </div>
  <script>
-    // Add fade-out class before redirect
     setTimeout(function () {
         document.body.classList.add("fade-out");
-        // Wait for the CSS transition (1s) before redirecting
         setTimeout(function () {
             window.location.href = "{% url 'home' %}";
-        }, 1000); // match this to the CSS transition duration
-    }, 2500); // start fade-out at 2.5s
+        }, 1000);
+    }, 4000);
 </script>
 </body>
 </html>
