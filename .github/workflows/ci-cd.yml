@@ -36,7 +36,7 @@ jobs:
 
           echo "[+] Cloning or pulling latest code..."
           if [ ! -d "ERDiagramGenerator" ]; then
-            git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git ERDiagramGenerator
+            git clone https://github.com/Aswin-AR5055/ERDiagramGenerator.git ERDiagramGenerator
           fi
 
           cd ERDiagramGenerator
@@ -53,9 +53,9 @@ jobs:
           echo "[+] Building new Docker image..."
           sudo docker build -t ergenerator .
 
-          echo "[+] Running new container on port 80..."
+          echo "[+] Running new container on port 8000..."
           sudo docker run -d --name erdiagram \
-            -p 80:8000 \
+            -p 8000:8000 \
             ergenerator
 
           echo "[+] Done! Current containers:"
