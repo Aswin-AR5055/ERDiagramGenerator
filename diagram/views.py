@@ -63,3 +63,6 @@ def home(request):
         'form': form,
         'diagram_code': diagram_code
     })
+
+def logo(request):
+    return render(request, 'logo/logo.html')
