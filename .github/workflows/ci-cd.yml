@@ -1,9 +1,5 @@
 name: CI/CD - ERDiagramGenerator
 
-on:
-  push:
-    branches:
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
