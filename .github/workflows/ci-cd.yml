@@ -3,7 +3,6 @@ name: CI/CD - ERDiagramGenerator
 on:
   push:
     branches:
-      - master
 
 jobs:
   deploy:
