@@ -10,4 +10,4 @@ COPY . /app/
 
 EXPOSE 8000
 
-CMD ["gunicorn", "-w", "2", "--threads", "2", "-b", "0.0.0.0:8000", "ERDiagramGenerator.wsgi:application"]
+CMD ["gunicorn", "-w", "2", "--threads", "2", "-b", "0.0.0.0:8000", "erdiagramgenerator.wsgi:application"]
